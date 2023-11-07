@@ -9,19 +9,24 @@
 </head>
 
 <body>
+    <div class="bg_texture">
+
+    </div>
     <nav>
         <div class="container">
             <div class="top-form">
                 <h1>LOGIN</h1>
                 <form action="#">
                     <div class="login-box">
-                        <label>Username:</label><br>
-                        <input type="text" minlength="4" placeholder="username" maxlength="15" required><br>
+                        <label for="name">Username:</label><br>
+                        <input type="text" minlength="4" placeholder="username" maxlength="15" required id="name"
+                            title="Please input your account's username"><br>
                     </div>
-
+                    
                     <div class="login-box">
-                        <label>Password:</label><br>
-                        <input type="password" min="5" placeholder="password" required><br><br>
+                        <label for="pass">Password:</label><br>
+                        <input type="password" min="5" placeholder="password" required id="pass"
+                            title="Please input your account's password"><br><br>
                     </div>
 
                     <div class="login-button">
@@ -32,15 +37,14 @@
 
             <div class="bot-form">
                 <form action="#">
-                    <label>Forgot username or password?</label><br>
-                    <button type="submit">Reset username or password</button>
+                    <label for="forgot">Forgot username or password?</label><br>
+                    <button type="submit" id="forgot">Reset username or password</button>
                 </form>
                 <form action="#">
                     <label>Don't have an account?</label>
                     <button>Signup</button>
                 </form>
             </div>
-
 
         </div>
     </nav>

@@ -8,13 +8,25 @@ body{
     background-attachment: fixed;
     display: flex;
     justify-content: center;
-    align-items: center;
+}
+
+.bg_texture{
+    background-image: url(images/bg_texture.png);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: .04;
+    z-index: -1;
+
 }
 
 .container{
     width: 300px;
     background: transparent;
     border: 7px solid rgba(255, 255, 255, 0.428);
+    border-radius: 20px;
+    margin-top: 120px;
 }
 
 .top-form{
@@ -26,10 +38,9 @@ body{
 }
 
 .top-form h1{
-    background: -webkit-linear-gradient(to right, #673AB7, #512DA8);
-    background-clip: text;
-    -webkit-background-clip: border-box;
-    -webkit-text-fill-color: transparent;
+    font-size: 2.3em;
+    margin: .3em;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .top-form label{

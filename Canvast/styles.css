@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-body{
+*{
     font-family: Roboto;
     margin: none;
     padding: none;
-    background-image: linear-gradient(to bottom, #FEAC5E 0%, #C779D0 100%);
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #010510;
     background-attachment: fixed;
     display: flex;
+    align-items: center;
     justify-content: center;
+    min-height: 93vh;
+    overflow: hidden;
 }
 
 .bg_texture{
@@ -16,17 +23,26 @@ body{
     height: 100%;
     width: 100%;
     position: absolute;
-    opacity: .04;
+    opacity: .03;
     z-index: -1;
+}
 
+#logo{
+    max-width: 45px;
+    display: flex;
+    justify-self: baseline;
+    align-self: baseline;
+    position: absolute;
+    left: 2vh;
+    border-radius: 15px;
 }
 
 .container{
     width: 300px;
-    background: transparent;
-    border: 7px solid rgba(255, 255, 255, 0.428);
+    background: rgb(177, 188, 218);
+    border: 7px solid rgba(237, 242, 255, 0.627);
     border-radius: 20px;
-    margin-top: 120px;
+    box-shadow: inset -3 -3 10px;
 }
 
 .top-form{
@@ -40,40 +56,48 @@ body{
 .top-form h1{
     font-size: 2.3em;
     margin: .3em;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(252, 220, 74, 0.859);
+    text-shadow: 0px 0px 1px black;
+    letter-spacing: 1px;
 }
 
 .top-form label{
     font-weight: 500;
-    color: rgba(254, 242, 213, 0.833);
+    color: rgb(234, 238, 255);
+    letter-spacing: .5px;
 }
 
 .login-box input{
     width: 100%;
     height: 40px;
     background: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.428);
+    border: 2px solid rgb(234, 238, 255);
     border-radius: 20px;
-
 }
 
 .login-box input::placeholder{
-    color: rgba(255, 255, 255, 0.455);
+    color: rgb(234, 238, 255);
     font-style: italic;
+    padding: 5px;
+    letter-spacing: .8px;
 }
 
 .login-button button{
     width: 80%;
     height: 40px;
-    border: 2px solid;
+    border: 2px solid #dce1ef9f;
     border-radius: 20px;
-    background-image: linear-gradient(to bottom, #e535f9 -60%, #FEAC5E);
+    background-color: rgb(44, 76, 220);
+    transition: ease-in .4;
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 600;
+    letter-spacing: .4px;
+    color: #dce1ef9f;
 }
 
+
 .login-button button:hover{
-    background-image: linear-gradient(to bottom, #FEAC5E 0%, #C779D0 150%);
+    background-color: rgb(35, 61, 178);
     cursor: pointer;
 }
 
@@ -86,19 +110,27 @@ body{
 
 .bot-form label{
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.428);
+    color: rgb(234, 238, 255);
 }
 
 .bot-form button{
-    font-weight: 300;
+    font-weight: 350;
     font-style: italic;
     font-size: 11px;
     background:transparent;
     border: none;
     text-decoration: underline;
-    color: rgba(239, 218, 255, 0.726);
+    color: rgba(255, 235, 148, 0.859);
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.629);
 }
 
 .bot-form button:hover{
     cursor: pointer;
+}
+
+@media only screen and (max-width: 600px){
+    .container{
+        transform: scale(.8,.8);
+    }
 }
